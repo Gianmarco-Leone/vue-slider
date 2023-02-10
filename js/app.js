@@ -56,6 +56,12 @@ const app = Vue.createApp({
       this.activeImage = index;
     },
   },
+  created() {
+    // Bonus 2
+    setInterval(() => {
+      this.nextImage();
+    }, 3000);
+  },
 });
 
 app.mount("#root");
