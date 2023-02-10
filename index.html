@@ -62,15 +62,12 @@
             <div class="item">
               <!-- QUI INSERISCO IMMAGINI CAROSELLO CON JS -->
               <img
-                src="./img/01.webp"
+                v-bind:src="images[activeImage].image"
                 alt="Carousel image"
               />
               <div class="item-text text-white text-end">
-                <h2>Marvel's Spiderman Miles Morale</h2>
-                <p>
-                  Experience the rise of Miles Morales as the new hero masters
-                  incredible, explosive new powers to become his own Spider-Man.
-                </p>
+                <h2>{{images[activeImage].title}}</h2>
+                <p>{{images[activeImage].text}}</p>
               </div>
             </div>
           </div>
@@ -79,38 +76,16 @@
             <div class="row flex-column">
               <div class="col thumbnails">
                 <!-- QUI INSERISCO IMMAGINI THUMBS CON JS -->
-                <img
+                <!-- <img
                   src="./img/01.webp"
                   alt="Carousel image"
                   class="my-border"
-                />
-              </div>
-
-              <div class="col thumbnails">
+                /> -->
                 <img
-                  src="./img/02.webp"
-                  alt="Carousel image"
-                />
-              </div>
-
-              <div class="col thumbnails">
-                <img
-                  src="./img/03.webp"
-                  alt="Carousel image"
-                />
-              </div>
-
-              <div class="col thumbnails">
-                <img
-                  src="./img/04.webp"
-                  alt="Carousel image"
-                />
-              </div>
-
-              <div class="col thumbnails">
-                <img
-                  src="./img/05.webp"
-                  alt="Carousel image"
+                  v-bind:src="element.image"
+                  v-for="(element, index) of images"
+                  alt="Thumbnails image"
+                  v-bind:class="(index == activeImage) ? 'my-border' : '' "
                 />
               </div>
             </div>
