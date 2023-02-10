@@ -94,12 +94,18 @@
           <!-- CONTROLS -->
 
           <!-- SLIDER PREV ARROW -->
-          <div id="arrow_prev">
+          <div
+            id="arrow_prev"
+            @click="prevImage()"
+          >
             <i class="fa-solid fa-chevron-up"></i>
           </div>
 
           <!-- SLIDER NEXT ARROW -->
-          <div id="arrow_next">
+          <div
+            id="arrow_next"
+            @click="nextImage()"
+          >
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>

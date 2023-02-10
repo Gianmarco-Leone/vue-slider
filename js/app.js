@@ -31,7 +31,22 @@ const app = Vue.createApp({
       activeImage: 0,
     };
   },
-  methods: {},
+  methods: {
+    prevImage() {
+      if (this.activeImage - 1 < 0) {
+        this.activeImage = this.images.length - 1;
+      } else {
+        this.activeImage--;
+      }
+    },
+    nextImage() {
+      if (this.activeImage + 1 >= this.images.length) {
+        this.activeImage = 0;
+      } else {
+        this.activeImage++;
+      }
+    },
+  },
 });
 
 app.mount("#root");
