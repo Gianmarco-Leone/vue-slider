@@ -76,16 +76,12 @@
             <div class="row flex-column">
               <div class="col thumbnails">
                 <!-- QUI INSERISCO IMMAGINI THUMBS CON JS -->
-                <!-- <img
-                  src="./img/01.webp"
-                  alt="Carousel image"
-                  class="my-border"
-                /> -->
                 <img
                   v-bind:src="element.image"
                   v-for="(element, index) of images"
                   alt="Thumbnails image"
                   v-bind:class="(index == activeImage) ? 'my-border' : '' "
+                  @click="changeImage(index)"
                 />
               </div>
             </div>
