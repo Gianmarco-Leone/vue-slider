@@ -82,6 +82,8 @@
                   alt="Thumbnails image"
                   v-bind:class="(index == activeImage) ? 'my-border' : '' "
                   @click="changeImage(index)"
+                  @mouseover="stopAutoplay()"
+                  @mouseleave="startAutoplay()"
                 />
               </div>
             </div>
