@@ -1,4 +1,17 @@
 /* GENERICS */
+body {
+  background-image: url(https://wallpapercave.com/wp/wp2928790.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Black Ops One", cursive;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #fff;
+}
+
 .container {
   height: 100vh;
 }
@@ -8,12 +21,12 @@
 }
 
 .col-10 {
-  height: 60vh;
+  height: 50vh;
   padding: 0;
 }
 
 .item {
-  height: 60vh;
+  height: 50vh;
   position: relative;
 }
 
@@ -23,6 +36,11 @@ img {
   object-fit: cover;
 }
 
+.item img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .item .item-text {
   position: absolute;
   bottom: 10px;
@@ -30,11 +48,11 @@ img {
 }
 
 .col-2 {
-  height: 60vh;
+  height: 50vh;
 }
 
 .col-2 .row .col {
-  height: calc(60vh / 5);
+  height: calc(50vh / 5);
   flex-basis: auto;
   padding: 0;
 }
@@ -43,8 +61,16 @@ img {
   cursor: pointer;
 }
 
+.col.thumbnails img:first-child {
+  border-top-right-radius: 20px;
+}
+
+.col.thumbnails img:last-child {
+  border-bottom-right-radius: 20px;
+}
+
 .my-border {
-  border: 4px solid rgba(200, 200, 200, 0.5);
+  border: 4px solid rgba(29, 93, 255, 0.9);
 }
 
 /* SLIDER ARROW */
@@ -56,7 +82,7 @@ img {
   font-size: 20px;
   right: 7%;
   cursor: pointer;
-  color: #444;
+  color: #ddd;
 }
 
 #arrow_prev {
